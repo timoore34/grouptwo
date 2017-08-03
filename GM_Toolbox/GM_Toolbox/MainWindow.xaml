@@ -1,0 +1,165 @@
+﻿<Window x:Class="GM_Toolbox.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GM_Toolbox"
+        mc:Ignorable="d"
+        Title="GM Toolbox" Height="500" Width="750">
+    <Grid
+        x:Name="MainMenuGrid"
+        Background="#191919">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid
+            x:Name="LeftGifGrid"
+            Grid.Column="0"
+            Grid.Row="1"
+            Grid.RowSpan="5"
+            Background="#191919">
+            <MediaElement
+                x:Name="LeftGif"
+                Source="C:\Users\Bradly Holland-Hedge\Documents\Projects\GM_Toolbox\GM_Toolbox\ExtraFiles\WhiteLightning.gif"
+                />
+        </Grid>
+        <Grid
+            x:Name="RightGifGrid"
+            Grid.Column="5"
+            Grid.Row="1"
+            Grid.RowSpan="5"
+            Background="#191919">
+            <MediaElement
+                x:Name="RightGif"
+                Source="C:\Users\Bradly Holland-Hedge\Documents\Projects\GM_Toolbox\GM_Toolbox\ExtraFiles\WhiteLightning.gif"                
+                />
+        </Grid>
+        <Label
+            x:Name="MMNameLabel"
+            Background="#191919"
+            Foreground="White"
+            FontSize="20"
+            FontWeight="Bold"
+            Content="Welcome To The GM Toolbox"
+            Grid.Column="1"
+            Grid.ColumnSpan="4"
+            Grid.Row="0"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            />
+        <Button
+            x:Name="RandomBattleMenuButton"
+            Background="Azure"
+            Grid.Column="2"
+            Grid.Row="1"
+            Height="20"
+            Width="20"
+            Margin="10"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center" Click="RandomBattleMenuButton_Click"
+            />
+        <Label
+            Content="Battle Randomizer"
+            Foreground="White"
+            Grid.Column="3"
+            Grid.Row="1"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            FontSize="18"
+            />
+        <Button
+            x:Name="RandomAreaMenuButton"
+            Background="Azure"
+            Grid.Column="2"
+            Grid.Row="2"
+            Height="20"
+            Width="20"
+            Margin="10"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            />
+        <Label
+            Content="Area Randomizer"
+            Foreground="White"
+            Grid.Column="3"
+            Grid.Row="2"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            FontSize="18"
+            />
+        <Button
+            x:Name="NPCMenuButton"
+            Background="Azure"
+            Grid.Column="2"
+            Grid.Row="3"
+            Height="20"
+            Width="20"
+            Margin="10"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            />
+        <Label
+            Content="NPC Generator"
+            Foreground="White"
+            Grid.Column="3"
+            Grid.Row="3"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            FontSize="18"
+            />
+        <Button
+            x:Name="LootMenuButton"
+            Background="Azure"
+            Grid.Column="2"
+            Grid.Row="4"
+            Height="20"
+            Width="20"
+            Margin="10"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            />
+        <Label
+            Content="Loot Generator"
+            Foreground="White"
+            Grid.Column="3"
+            Grid.Row="4"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            FontSize="18"
+            />
+        <Button
+            x:Name="PlayerMenuButton"
+            Background="Azure"
+            Grid.Column="2"
+            Grid.Row="5"
+            Height="20"
+            Width="20"
+            Margin="10"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            />
+        <Label
+            Content="PC Storage"
+            Foreground="White"
+            Grid.Column="3"
+            Grid.Row="5"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            FontSize="18"
+            />
+    </Grid>
+</Window>
