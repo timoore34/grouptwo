@@ -57,8 +57,7 @@
     <Page Include="ExtraFiles\ControlElements\ButtonLabel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ExtraFiles\ControlElements\CheckBoxDoubleRadioButton.xaml">
+    </Page>    <Page Include="ExtraFiles\ControlElements\CheckBoxDoubleRadioButton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -76,8 +75,7 @@
     </Compile>
     <Compile Include="ExtraFiles\ControlElements\ButtonLabel.xaml.cs">
       <DependentUpon>ButtonLabel.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ExtraFiles\ControlElements\CheckBoxDoubleRadioButton.xaml.cs">
+    </Compile>    <Compile Include="ExtraFiles\ControlElements\CheckBoxDoubleRadioButton.xaml.cs">
       <DependentUpon>CheckBoxDoubleRadioButton.xaml</DependentUpon>
     </Compile>
     <Compile Include="ExtraFiles\ControlElements\CheckBoxDropdownBox.xaml.cs">
@@ -128,7 +126,35 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Models\AreaGen.xaml.cs">
+<SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Models\BattleRandomizer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Models\DieRoller.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Models\LootGen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Models\NPCGen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Models\PlayerMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Models\TrapGen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>    <Compile Include="Models\AreaGen.xaml.cs">
       <DependentUpon>AreaGen.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\BattleRandomizer.xaml.cs">
@@ -151,6 +177,26 @@
     </Compile>
     <Compile Include="NPCGenerator.xaml.cs">
       <DependentUpon>NPCGenerator.xaml</DependentUpon>
+    </Compile>    <Compile Include="Models\AreaGen.xaml.cs">
+      <DependentUpon>AreaGen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BattleRandomizer.xaml.cs">
+      <DependentUpon>BattleRandomizer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DieRoller.xaml.cs">
+      <DependentUpon>DieRoller.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LootGen.xaml.cs">
+      <DependentUpon>LootGen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NPCGen.xaml.cs">
+      <DependentUpon>NPCGen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PlayerMenu.xaml.cs">
+      <DependentUpon>PlayerMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TrapGen.xaml.cs">
+      <DependentUpon>TrapGen.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
