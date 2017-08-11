@@ -48,7 +48,7 @@ namespace GM_Toolbox.ControlElements
             set
             {
                 labelColor = value;
-                ButtonLabel.Foreground = labelColor;
+                LabeledButtonLabel.Foreground = labelColor;
             }
         }
         public string LabelContent
@@ -57,7 +57,7 @@ namespace GM_Toolbox.ControlElements
             set
             {
                 labelContent = value;
-                ButtonLabel.Content = labelContent;
+                LabeledButtonLabel.Content = labelContent;
             }
         }
         public ButtonLabel()

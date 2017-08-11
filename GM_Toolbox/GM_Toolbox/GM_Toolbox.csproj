@@ -54,59 +54,101 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="BR.xaml">
+    <Page Include="ExtraFiles\ControlElements\ButtonLabel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ControlElements\ButtonLabel.xaml">
+    <Page Include="ExtraFiles\ControlElements\CheckBoxDoubleRadioButton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ControlElements\CheckBoxDoubleRadioButton.xaml">
+    <Page Include="ExtraFiles\ControlElements\CheckBoxDropdownBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ControlElements\CheckBoxDropdownBox.xaml">
+    <Page Include="ExtraFiles\ControlElements\NameTextEntryCheckBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ControlElements\NameTextEntryCheckBox.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BR.xaml.cs">
-      <DependentUpon>BR.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ControlElements\ButtonLabel.xaml.cs">
+    <Compile Include="ExtraFiles\ControlElements\ButtonLabel.xaml.cs">
       <DependentUpon>ButtonLabel.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ControlElements\CheckBoxDoubleRadioButton.xaml.cs">
+    <Compile Include="ExtraFiles\ControlElements\CheckBoxDoubleRadioButton.xaml.cs">
       <DependentUpon>CheckBoxDoubleRadioButton.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ControlElements\CheckBoxDropdownBox.xaml.cs">
+    <Compile Include="ExtraFiles\ControlElements\CheckBoxDropdownBox.xaml.cs">
       <DependentUpon>CheckBoxDropdownBox.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ControlElements\NameTextEntryCheckBox.xaml.cs">
+    <Compile Include="ExtraFiles\ControlElements\NameTextEntryCheckBox.xaml.cs">
       <DependentUpon>NameTextEntryCheckBox.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
+    <Page Include="MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="Models\AreaGen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Models\BattleRandomizer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Models\DieRoller.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Models\LootGen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Models\NPCGen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Models\PlayerMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Models\TrapGen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="NPCGenerator.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\AreaGen.xaml.cs">
+      <DependentUpon>AreaGen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BattleRandomizer.xaml.cs">
+      <DependentUpon>BattleRandomizer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DieRoller.xaml.cs">
+      <DependentUpon>DieRoller.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LootGen.xaml.cs">
+      <DependentUpon>LootGen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NPCGen.xaml.cs">
+      <DependentUpon>NPCGen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PlayerMenu.xaml.cs">
+      <DependentUpon>PlayerMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TrapGen.xaml.cs">
+      <DependentUpon>TrapGen.xaml</DependentUpon>
+    </Compile>
     <Compile Include="NPCGenerator.xaml.cs">
       <DependentUpon>NPCGenerator.xaml</DependentUpon>
     </Compile>
@@ -137,6 +179,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ExtraFiles\Controls\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ExtraFiles\WhiteLightning.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

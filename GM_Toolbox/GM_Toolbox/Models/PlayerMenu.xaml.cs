@@ -12,16 +12,23 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace GM_Toolbox
+namespace GM_Toolbox.Models
 {
     /// <summary>
-    /// Interaction logic for BR.xaml
+    /// Interaction logic for PlayerMenu.xaml
     /// </summary>
-    public partial class BR : Window
+    public partial class PlayerMenu : Window
     {
-        public BR()
+        public PlayerMenu()
         {
             InitializeComponent();
+        }
+
+        private void HomeMenuButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mw = new MainWindow();
+            this.Close();
+            mw.Show();
         }
     }
 }

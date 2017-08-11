@@ -71,7 +71,8 @@
             Width="20"
             Margin="10"
             HorizontalAlignment="Center"
-            VerticalAlignment="Center" Click="RandomBattleMenuButton_Click"
+            VerticalAlignment="Center" 
+            Click="RandomBattleMenuButton_Click"
             />
         <Label
             Content="Battle Randomizer"
@@ -91,7 +92,8 @@
             Width="20"
             Margin="10"
             HorizontalAlignment="Center"
-            VerticalAlignment="Center" Click="RandomBattleMenuButton_Click"
+            VerticalAlignment="Center" 
+            Click="RandomTrapMenuButton_Click"
             />
         <Label
             Content="Trap Generator"
@@ -112,6 +114,7 @@
             Margin="10"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
+            Click="AreaGenMenuButton_Click"
             />
         <Label
             Content="Area Generator"
@@ -132,6 +135,7 @@
             Margin="10"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
+            Click="NPCMenuButton_Click"
             />
         <Label
             Content="NPC Generator"
@@ -152,6 +156,7 @@
             Margin="10"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
+            Click="LootMenuButton_Click"
             />
         <Label
             Content="Loot Generator"
@@ -172,6 +177,7 @@
             Margin="10"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
+            Click="PlayerMenuButton_Click"
             />
         <Label
             Content="PC Storage"
@@ -182,5 +188,27 @@
             HorizontalAlignment="Center"
             FontSize="18"
             />
+        <Button
+            x:Name="DiceRollerMenuButton"
+            Background="Azure"
+            Grid.Column="2"
+            Grid.Row="7"
+            Height="20"
+            Width="20"
+            Margin="10"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Click="DiceRollerMenuButton_Click"
+            />
+        <Label
+            Content="Die Roller"
+            Foreground="White"
+            Grid.Column="3"
+            Grid.Row="7"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            FontSize="18"
+            />
     </Grid>
 </Window>
+
