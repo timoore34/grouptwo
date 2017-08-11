@@ -20,10 +20,22 @@ namespace GM_Toolbox.ControlElements
     /// </summary>
     public partial class ButtonLabel : UserControl
     {
+        private int labelFontSize;
         private int labeledButtonWidth;
         private int labeledButtonHeight;
         private Brush labelColor;
+        private Brush buttonColor;
         private string labelContent;
+        private RoutedEventHandler click;
+        public int LabelFontSize
+        {
+            get { return labelFontSize; }
+            set
+            {
+                labelFontSize = value;
+                LabeledButtonLabel.FontSize = labelFontSize;
+            }
+        }
         public int LabeledButtonWidth
         {
             get { return labeledButtonWidth; }
@@ -51,6 +63,15 @@ namespace GM_Toolbox.ControlElements
                 LabeledButtonLabel.Foreground = labelColor;
             }
         }
+        public Brush ButtonColor
+        {
+            get { return buttonColor; }
+            set
+            {
+                buttonColor = value;
+                LabeledButton.Background = buttonColor;
+            }
+        }
         public string LabelContent
         {
             get { return labelContent; }
@@ -58,6 +79,15 @@ namespace GM_Toolbox.ControlElements
             {
                 labelContent = value;
                 LabeledButtonLabel.Content = labelContent;
+            }
+        }
+        public RoutedEventHandler Click
+        {
+            get { return click; }
+            set
+            {
+                click = value;
+                LabeledButton.Click += click;
             }
         }
         public ButtonLabel()

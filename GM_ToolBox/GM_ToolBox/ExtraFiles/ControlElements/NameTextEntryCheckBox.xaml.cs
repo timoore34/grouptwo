@@ -33,6 +33,9 @@ namespace GM_Toolbox.ControlElements
         private string firstLabelContent;
         private string secondLabelContent;
         private string thirdLabelContent;
+        private bool firstTextBoxEnabled;
+        private bool secondTextBoxEnabled;
+        private bool thirdTextBoxEnabled;
         public int TextBoxHeight
         {
             get { return textBoxHeight; }
@@ -149,6 +152,33 @@ namespace GM_Toolbox.ControlElements
             {
                 thirdLabelContent = value;
                 ThirdLabel.Content = thirdLabelContent;
+            }
+        }
+        public bool FirstTextBoxEnabled
+        {
+            get { return firstTextBoxEnabled; }
+            set
+            {
+                firstTextBoxEnabled = value;
+                FirstTextBox.IsEnabled = firstTextBoxEnabled;
+            }
+        }
+        public bool SecondTextBoxEnabled
+        {
+            get { return secondTextBoxEnabled; }
+            set
+            {
+                secondTextBoxEnabled = value;
+                SecondTextBox.IsEnabled = secondTextBoxEnabled;
+            }
+        }
+        public bool ThirdTextBoxEnabled
+        {
+            get { return thirdTextBoxEnabled; }
+            set
+            {
+                thirdTextBoxEnabled = value;
+                ThirdTextBox.IsEnabled = thirdTextBoxEnabled;
             }
         }
         public NameTextEntryCheckBox()

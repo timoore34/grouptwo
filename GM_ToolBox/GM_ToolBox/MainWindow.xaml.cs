@@ -49,7 +49,7 @@ namespace GM_Toolbox
 
         private void NPCMenuButton_Click(object sender, RoutedEventArgs e)
         {
-            NPCGen ng = new NPCGen();
+            NPCGen ng = new NPCGen(this);
             this.Close();
             ng.Show();
         }
@@ -73,6 +73,12 @@ namespace GM_Toolbox
             DieRoller dr = new DieRoller();
             this.Close();
             dr.Show();
+        }
+        public void CloseChildWindows(Window sender)
+        {
+            MainWindow mw = new MainWindow();
+            sender.Close();
+            mw.Show();
         }
     }
 }

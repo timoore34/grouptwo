@@ -7,16 +7,17 @@
     <StackPanel Orientation="Horizontal">
         <StackPanel.Resources>
             <Style TargetType="TextBox">
-                <Setter Property="Margin" Value="2.5 5"/>
+                <Setter Property="Margin" Value=".5 5"/>
                 <Setter Property="Width" Value="50"/>
             </Style>
             <Style TargetType="Label">
-                <Setter Property="Margin" Value="2.5 5"/>
+                <Setter Property="Margin" Value=".5 5"/>
             </Style>
         </StackPanel.Resources>
         <Viewbox x:Name="CheckSize"
                  Margin="5 5 10 5">
-            <CheckBox x:Name="EnableCheckBox"/>
+            <CheckBox x:Name="EnableCheckBox"
+                      VerticalContentAlignment="Center"/>
         </Viewbox>
         <Label x:Name="FirstLabel"/>
         <TextBox x:Name="FirstTextBox"/>

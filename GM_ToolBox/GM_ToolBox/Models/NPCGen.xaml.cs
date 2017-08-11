@@ -19,16 +19,16 @@ namespace GM_Toolbox.Models
     /// </summary>
     public partial class NPCGen : Window
     {
-        public NPCGen()
+        private MainWindow location;
+        public NPCGen(MainWindow location)
         {
             InitializeComponent();
+            this.location = location;
+            ReturnHomeButton.Click += HomeButtonClickEvent;
         }
-
-        private void HomeMenuButton_Click(object sender, RoutedEventArgs e)
+        private void HomeButtonClickEvent(object sender, RoutedEventArgs e)
         {
-            MainWindow mw = new MainWindow();
-            this.Close();
-            mw.Show();
+            location.CloseChildWindows(this);
         }
     }
 }
