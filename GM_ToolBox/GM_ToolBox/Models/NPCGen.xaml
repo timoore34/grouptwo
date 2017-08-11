@@ -9,7 +9,7 @@
         Title="NPC Generator" Height="500" Width="750">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
             <ColumnDefinition Width="1*"/>
             <!--<ColumnDefinition Width="*"/>
             <ColumnDefinition Width="2*"/>
@@ -27,7 +27,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>-->
         <StackPanel>
-            <uce:NameTextEntryCheckBox x:Name="NameFeild"
+            <uce:NameTextEntryCheckBox x:Name="NameField"
                                        CheckBoxSize="20"
                                        LabelColor="Black"
                                        FirstLabelContent="First Name:"
@@ -36,10 +36,15 @@
                                        FirstTextBoxWidth="75"
                                        ThirdTextBoxWidth="75"
                                        CheckBoxContent="Force Name Use"
-                                       LabelFontSize="7"/>
+                                       LabelFontSize="10"/>
+            <uce:CheckBoxDoubleRadioButton x:Name="GenderField"
+                                           CheckBoxSize="20"
+                                           TextColor="Black"
+                                           CheckBoxContent="Force Gender Use"
+                                           LabelFontSize="10"
+                                           RadioButtonOneContent="Male"
+                                           RadioButtonTwoContent="Female"/>
             <Label Height="25"/>
-            <Label Height="25"/>
-            
             <uce:ButtonLabel x:Name="ReturnHomeButton"
                              LabelContent="Back to Home"
                              LabelFontSize="18"

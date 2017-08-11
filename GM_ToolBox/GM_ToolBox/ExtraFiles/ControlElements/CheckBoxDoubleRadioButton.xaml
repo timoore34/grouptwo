@@ -4,7 +4,19 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:GM_Toolbox.ControlElements">
-    <Grid>
-            
-    </Grid>
+    <StackPanel Orientation="Horizontal">
+        <Viewbox x:Name="CheckSize"
+                 Margin="5 5 10 5">
+            <CheckBox x:Name="EnableCheckBox"
+                      VerticalContentAlignment="Center"/>
+        </Viewbox>
+        <RadioButton x:Name="RadioButtonOne"
+                     GroupName="OneOrOther" 
+                     VerticalAlignment="Center"
+                     Margin="5"/>
+        <RadioButton x:Name="RadioButtonTwo"
+                     GroupName="OneOrOther" 
+                     VerticalAlignment="Center"
+                     Margin="0 5 5 5"/>
+    </StackPanel>
 </UserControl>

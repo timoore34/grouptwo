@@ -64,7 +64,7 @@ namespace GM_Toolbox.ControlElements
             set
             {
                 labelFontSize = value;
-                EnableCheckBox.FontSize = labelFontSize;
+                EnableCheckBox.FontSize = labelFontSize - 2.5;
                 FirstLabel.FontSize = labelFontSize;
                 SecondLabel.FontSize = LabelFontSize;
                 ThirdLabel.FontSize = LabelFontSize;
