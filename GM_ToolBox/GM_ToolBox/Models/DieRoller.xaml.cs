@@ -36,6 +36,7 @@ namespace GM_Toolbox.Models
 
             //SplashScreen splash = new SplashScreen(@"C:\Users\Bradly Holland-Hedge\Documents\GitHub\grouptwo\GM_ToolBox\GM_ToolBox\ExtraFiles\ElDierado.gif");
             //splash.Show(true);
+            ResultLabel.Content = RollDie((int.Parse(NumOfDiceBox.Text)), (int.Parse(TypeOfDiceBox.Text)), (int.Parse(ModBox.Text)));
         }
 
         private int RollDie(int numOfDice, int numOfSides, int mod)
