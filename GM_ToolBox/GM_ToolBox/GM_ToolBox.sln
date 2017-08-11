@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GM_ToolBox", "GM_TooBox\GM_ToolBox.csproj", "{44BD5538-40A9-4A29-9D35-6823E9E33BB9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GM_ToolBox", "GM_ToolBox.csproj", "{44BD5538-40A9-4A29-9D35-6823E9E33BB9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

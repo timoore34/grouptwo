@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GM_Toolbox.Properties
+namespace GM_TooBox.Properties
 {
 
 
