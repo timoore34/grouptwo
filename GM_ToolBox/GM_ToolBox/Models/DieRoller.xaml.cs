@@ -30,6 +30,28 @@ namespace GM_Toolbox.Models
             this.Close();
             mw.Show();
         }
+
+        private void RollButton_Click(object sender, RoutedEventArgs e)
+        {
+
+            //SplashScreen splash = new SplashScreen(@"C:\Users\Bradly Holland-Hedge\Documents\GitHub\grouptwo\GM_ToolBox\GM_ToolBox\ExtraFiles\ElDierado.gif");
+            //splash.Show(true);
+        }
+
+        private int RollDie(int numOfDice, int numOfSides, int mod)
+        {
+            Random rando = new Random();
+            int sum = 0;
+
+
+            for(int i = 0; i < numOfDice; i++)
+            {
+                sum += rando.Next(1, numOfSides + 1);
+            }
+            sum = sum + mod;
+
+            return sum;
+        }
     }
 }
 
