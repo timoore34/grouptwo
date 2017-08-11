@@ -54,10 +54,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="BR.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -66,15 +62,61 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BR.xaml.cs">
-      <DependentUpon>BR.xaml</DependentUpon>
-    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Models\AreaGen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Models\BattleRandomizer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Models\DieRoller.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Models\LootGen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Models\NPCGen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Models\PlayerMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Models\TrapGen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\AreaGen.xaml.cs">
+      <DependentUpon>AreaGen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BattleRandomizer.xaml.cs">
+      <DependentUpon>BattleRandomizer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DieRoller.xaml.cs">
+      <DependentUpon>DieRoller.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LootGen.xaml.cs">
+      <DependentUpon>LootGen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NPCGen.xaml.cs">
+      <DependentUpon>NPCGen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PlayerMenu.xaml.cs">
+      <DependentUpon>PlayerMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TrapGen.xaml.cs">
+      <DependentUpon>TrapGen.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
