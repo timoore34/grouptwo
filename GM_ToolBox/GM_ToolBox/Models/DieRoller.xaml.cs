@@ -33,10 +33,39 @@ namespace GM_Toolbox.Models
 
         private void RollButton_Click(object sender, RoutedEventArgs e)
         {
-
-            //SplashScreen splash = new SplashScreen(@"C:\Users\Bradly Holland-Hedge\Documents\GitHub\grouptwo\GM_ToolBox\GM_ToolBox\ExtraFiles\ElDierado.gif");
-            //splash.Show(true);
-            ResultLabel.Content = RollDie((int.Parse(NumOfDiceBox.Text)), (int.Parse(TypeOfDiceBox.Text)), (int.Parse(ModBox.Text)));
+            int numOfDice = 0, typeOfDice = 0, mod = 0;
+            bool isValid = true;
+            try
+            {
+                numOfDice = int.Parse(NumOfDiceBox.Text);
+                typeOfDice = int.Parse(TypeOfDiceBox.Text);
+                mod = int.Parse(ModBox.Text);
+            }
+            catch (FormatException)
+            {
+                //exception code here
+            }
+            if (isValid)
+            {
+                if (numOfDice < 0)
+                {
+                    //negative message here
+                }
+                else if (typeOfDice < 0)
+                {
+                    //negative message here
+                }
+                else if (mod < 0)
+                {
+                    //negative message here
+                }
+                else
+                {
+                    //SplashScreen splash = new SplashScreen(@"C:\Users\Bradly Holland-Hedge\Documents\GitHub\grouptwo\GM_ToolBox\GM_ToolBox\ExtraFiles\ElDierado.gif");
+                    //splash.Show(true);
+                    ResultLabel.Content = RollDie(numOfDice, typeOfDice, mod);
+                }
+            }
         }
 
         private int RollDie(int numOfDice, int numOfSides, int mod)
