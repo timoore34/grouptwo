@@ -8,24 +8,6 @@
         mc:Ignorable="d"
         Title="NPC Generator" Height="500" Width="750">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="3*"/>
-            <ColumnDefinition Width="1*"/>
-            <!--<ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="2*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="2*"/>-->
-        </Grid.ColumnDefinitions>
-        <!--<Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>-->
         <StackPanel>
             <uce:NameTextEntryCheckBox x:Name="NameField"
                                        CheckBoxSize="20"
@@ -35,22 +17,27 @@
                                        ThirdLabelContent="Last Name:"
                                        FirstTextBoxWidth="75"
                                        ThirdTextBoxWidth="75"
-                                       CheckBoxContent="Force Name Use"
+                                       CheckBoxContent="Use Name"
                                        LabelFontSize="10"/>
             <uce:CheckBoxDoubleRadioButton x:Name="GenderField"
                                            CheckBoxSize="20"
                                            TextColor="Black"
-                                           CheckBoxContent="Force Gender Use"
+                                           CheckBoxContent="Use Gender"
                                            LabelFontSize="10"
                                            RadioButtonOneContent="Male"
                                            RadioButtonTwoContent="Female"/>
-            <Label Height="25"/>
+            <uce:CheckBoxDropdownBox x:Name="RaceSelection"
+                                     CheckBoxSize="20"
+                                     CheckBoxTextFontSize="10"
+                                     CheckBoxContent="Use Race"
+                                     DropDownListWidth="75"/>
             <uce:ButtonLabel x:Name="ReturnHomeButton"
                              LabelContent="Back to Home"
                              LabelFontSize="18"
                              LabeledButtonHeight="20"
                              LabeledButtonWidth="20"
-                             ButtonColor="Black"/>
+                             ButtonColor="Black"
+                             HorizontalAlignment="Right"/>
         </StackPanel>
     </Grid>
 </Window>

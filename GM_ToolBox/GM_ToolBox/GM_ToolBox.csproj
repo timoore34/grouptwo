@@ -66,6 +66,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="ExtraFiles\ControlElements\CheckBoxOneLabeledTextField.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ExtraFiles\ControlElements\NameTextEntryCheckBox.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -86,6 +90,9 @@
     </Compile>
     <Compile Include="ExtraFiles\ControlElements\CheckBoxDropdownBox.xaml.cs">
       <DependentUpon>CheckBoxDropdownBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ExtraFiles\ControlElements\CheckBoxOneLabeledTextField.xaml.cs">
+      <DependentUpon>CheckBoxOneLabeledTextField.xaml</DependentUpon>
     </Compile>
     <Compile Include="ExtraFiles\ControlElements\NameTextEntryCheckBox.xaml.cs">
       <DependentUpon>NameTextEntryCheckBox.xaml</DependentUpon>
