@@ -55,10 +55,6 @@ namespace GM_Toolbox.Models
                 {
                     //negative message here
                 }
-                else if (mod < 0)
-                {
-                    //negative message here
-                }
                 else
                 {
                     //SplashScreen splash = new SplashScreen(@"C:\Users\Bradly Holland-Hedge\Documents\GitHub\grouptwo\GM_ToolBox\GM_ToolBox\ExtraFiles\ElDierado.gif");
