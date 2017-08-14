@@ -33,9 +33,9 @@ namespace GM_Toolbox.ControlElements
         private string firstLabelContent;
         private string secondLabelContent;
         private string thirdLabelContent;
-        private bool firstTextBoxEnabled;
-        private bool secondTextBoxEnabled;
-        private bool thirdTextBoxEnabled;
+        private bool firstTextBoxEnableState;
+        private bool secondTextBoxEnableState;
+        private bool thirdTextBoxEnableState;
         public int TextBoxHeight
         {
             get { return textBoxHeight; }
@@ -154,31 +154,31 @@ namespace GM_Toolbox.ControlElements
                 ThirdLabel.Content = thirdLabelContent;
             }
         }
-        public bool FirstTextBoxEnabled
+        public bool FirstTextBoxEnableState
         {
-            get { return firstTextBoxEnabled; }
+            get { return firstTextBoxEnableState; }
             set
             {
-                firstTextBoxEnabled = value;
-                FirstTextBox.IsEnabled = firstTextBoxEnabled;
+                firstTextBoxEnableState = value;
+                FirstTextBox.IsEnabled = firstTextBoxEnableState;
             }
         }
-        public bool SecondTextBoxEnabled
+        public bool SecondTextBoxEnableState
         {
-            get { return secondTextBoxEnabled; }
+            get { return secondTextBoxEnableState; }
             set
             {
-                secondTextBoxEnabled = value;
-                SecondTextBox.IsEnabled = secondTextBoxEnabled;
+                secondTextBoxEnableState = value;
+                SecondTextBox.IsEnabled = secondTextBoxEnableState;
             }
         }
-        public bool ThirdTextBoxEnabled
+        public bool ThirdTextBoxEnableState
         {
-            get { return thirdTextBoxEnabled; }
+            get { return thirdTextBoxEnableState; }
             set
             {
-                thirdTextBoxEnabled = value;
-                ThirdTextBox.IsEnabled = thirdTextBoxEnabled;
+                thirdTextBoxEnableState = value;
+                ThirdTextBox.IsEnabled = thirdTextBoxEnableState;
             }
         }
         public NameTextEntryCheckBox()

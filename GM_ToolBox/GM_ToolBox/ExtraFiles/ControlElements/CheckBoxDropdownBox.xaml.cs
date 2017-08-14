@@ -27,7 +27,6 @@ namespace GM_Toolbox.ControlElements
         private int dropDownListHeight;
         private string checkBoxContent;
         private Brush textColor;
-        private IEnumerable dropDownListItems;
         private bool comboBoxEnableState;
         public int CheckBoxTextFontSize
         {
@@ -72,15 +71,6 @@ namespace GM_Toolbox.ControlElements
             {
                 checkBoxContent = value;
                 EnableCheckBox.Content = checkBoxContent;
-            }
-        }
-        public IEnumerable DropDownListItems
-        {
-            get { return dropDownListItems; }
-            set
-            {
-                dropDownListItems = value;
-                ListDropDown.ItemsSource = dropDownListItems;
             }
         }
         public bool ComboBoxEnableState

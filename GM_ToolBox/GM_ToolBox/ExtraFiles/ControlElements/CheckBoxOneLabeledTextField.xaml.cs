@@ -20,11 +20,68 @@ namespace GM_ToolBox.ExtraFiles.ControlElements
     /// </summary>
     public partial class CheckBoxOneLabeledTextField : UserControl
     {
-        private int LabelFontSize;
-        private int TextBoxWidth;
-        private string LabelContent;
-        private string CheckBoxContent;
-        private Brush LabelColor;
+        private int labelFontSize;
+        private int textBoxWidth;
+        private string labelContent;
+        private string checkBoxContent;
+        private Brush labelColor;
+        private bool textBoxEnable;
+        public int LabelFontSize
+        {
+            get { return labelFontSize; }
+            set
+            {
+                labelFontSize = value;
+                EnableCheckBox.FontSize = labelFontSize - 2;
+                TextFieldLabel.FontSize = labelFontSize;
+            }
+        }
+        public int TextBoxWidth
+        {
+            get { return textBoxWidth; }
+            set
+            {
+                textBoxWidth = value;
+                TextField.Width = textBoxWidth;
+            }
+         }
+        public string LabelContent
+        {
+            get { return labelContent; }
+            set
+            {
+                labelContent = value;
+                TextFieldLabel.Content = labelContent;
+            }
+        }
+        public string CheckBoxContent
+        {
+            get { return checkBoxContent; }
+            set
+            {
+                checkBoxContent = value;
+                EnableCheckBox.Content = checkBoxContent;
+            }
+        }
+        public Brush LabelColor
+        {
+            get { return labelColor; }
+            set
+            {
+                labelColor = value;
+                EnableCheckBox.Foreground = labelColor;
+                TextFieldLabel.Foreground = labelColor;
+            }
+        }
+        public bool TextBoxEnable
+        {
+            get { return textBoxEnable; }
+            set
+            {
+                textBoxEnable = value;
+                TextField.IsEnabled = textBoxEnable;
+            }
+        }
         public CheckBoxOneLabeledTextField()
         {
             InitializeComponent();
