@@ -26,6 +26,7 @@ namespace GM_ToolBox.ExtraFiles.ControlElements
         private string checkBoxContent;
         private Brush labelColor;
         private bool textBoxEnable;
+        private bool checkBoxElementEnableEvent;
         public int LabelFontSize
         {
             get { return labelFontSize; }
@@ -82,9 +83,30 @@ namespace GM_ToolBox.ExtraFiles.ControlElements
                 TextField.IsEnabled = textBoxEnable;
             }
         }
+        public bool CheckBoxElementEnableEvent
+        {
+            get { return checkBoxElementEnableEvent; }
+            set
+            {
+                checkBoxElementEnableEvent = value;
+                if (checkBoxElementEnableEvent)
+                {
+                    EnableCheckBox.Click += EnableChange;
+                }
+                else
+                {
+                    EnableCheckBox.Click -= EnableChange;
+                }
+            }
+        }
         public CheckBoxOneLabeledTextField()
         {
             InitializeComponent();
+        }
+        private void EnableChange(object sender, RoutedEventArgs e)
+        {
+            TextBoxEnable = (bool)EnableCheckBox.IsChecked;
+            TextField.Clear();
         }
     }
 }

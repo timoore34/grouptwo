@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace GM_Toolbox.ControlElements
+namespace GM_ToolBox.ExtraFiles.ControlElements
 {
     /// <summary>
     /// A control element that provides access to a labeled button.

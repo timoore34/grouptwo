@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace GM_Toolbox.ControlElements
+namespace GM_ToolBox.ExtraFiles.ControlElements
 {
     /// <summary>
     /// This control gives you a checkbox that can be used to endable or disable use of control elements.
@@ -36,6 +36,7 @@ namespace GM_Toolbox.ControlElements
         private bool firstTextBoxEnableState;
         private bool secondTextBoxEnableState;
         private bool thirdTextBoxEnableState;
+        private bool checkBoxElementEnableEvent;
         public int TextBoxHeight
         {
             get { return textBoxHeight; }
@@ -181,9 +182,34 @@ namespace GM_Toolbox.ControlElements
                 ThirdTextBox.IsEnabled = thirdTextBoxEnableState;
             }
         }
+        public bool CheckBoxElementEnableEvent
+        {
+            get { return checkBoxElementEnableEvent; }
+            set
+            {
+                checkBoxElementEnableEvent = value;
+                if (checkBoxElementEnableEvent)
+                {
+                    EnableCheckBox.Click += EnableChange;
+                }
+                else
+                {
+                    EnableCheckBox.Click -= EnableChange;
+                }
+            }
+        }
         public NameTextEntryCheckBox()
         {
             InitializeComponent();
+        }
+        private void EnableChange(object sender, RoutedEventArgs e)
+        {
+            FirstTextBoxEnableState = (bool)EnableCheckBox.IsChecked;
+            SecondTextBoxEnableState = (bool)EnableCheckBox.IsChecked;
+            ThirdTextBoxEnableState = (bool)EnableCheckBox.IsChecked;
+            FirstTextBox.Clear();
+            SecondTextBox.Clear();
+            ThirdTextBox.Clear();
         }
     }
 }

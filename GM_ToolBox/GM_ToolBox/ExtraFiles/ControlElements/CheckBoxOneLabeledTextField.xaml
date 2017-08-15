@@ -11,7 +11,7 @@
                       VerticalContentAlignment="Center"/>
         </Viewbox>
         <Label x:Name="TextFieldLabel"
-               Margin="5"/>
+               Margin="0 5 5 5"/>
         <TextBox x:Name="TextField"
                  Margin="0 5 5 5"
                  Width="50"/>

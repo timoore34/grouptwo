@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace GM_Toolbox.ControlElements
+namespace GM_ToolBox.ExtraFiles.ControlElements
 {
     /// <summary>
     /// Creates a CheckBox and ComboBox element
@@ -28,6 +28,7 @@ namespace GM_Toolbox.ControlElements
         private string checkBoxContent;
         private Brush textColor;
         private bool comboBoxEnableState;
+        private bool checkBoxElementEnableEvent;
         public int CheckBoxTextFontSize
         {
             get { return checkBoxTextFontSize; }
@@ -91,9 +92,30 @@ namespace GM_Toolbox.ControlElements
                 EnableCheckBox.Foreground = textColor;
             }
         }
+        public bool CheckBoxElementEnableEvent
+        {
+            get { return checkBoxElementEnableEvent; }
+            set
+            {
+                checkBoxElementEnableEvent = value;
+                if (checkBoxElementEnableEvent)
+                {
+                    EnableCheckBox.Click += EnableChange;
+                }
+                else
+                {
+                    EnableCheckBox.Click -= EnableChange;
+                }
+            }
+        }
         public CheckBoxDropdownBox()
         {
             InitializeComponent();
+        }
+        private void EnableChange(object sender, RoutedEventArgs e)
+        {
+            ComboBoxEnableState = (bool)EnableCheckBox.IsChecked;
+            ListDropDown.SelectedIndex = -1;
         }
     }
 }

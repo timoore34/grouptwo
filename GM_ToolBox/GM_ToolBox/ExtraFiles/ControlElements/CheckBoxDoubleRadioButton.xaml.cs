@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace GM_Toolbox.ControlElements
+namespace GM_ToolBox.ExtraFiles.ControlElements
 {
     /// <summary>
     /// Interaction logic for CheckBoxDoubleRadioButton.xaml
@@ -30,6 +30,7 @@ namespace GM_Toolbox.ControlElements
         private bool radioButtonTwoEnable;
         private bool radioButtonOneIsChecked;
         private bool radioButtonTwoIsChecked;
+        private bool checkBoxElementEnableEvent;
         public int LabelFontSize
         {
             get { return labelFontSize; }
@@ -124,9 +125,32 @@ namespace GM_Toolbox.ControlElements
                 RadioButtonTwo.IsChecked = radioButtonTwoIsChecked;
             }
         }
+        public bool CheckBoxElementEnableEvent
+        {
+            get { return checkBoxElementEnableEvent; }
+            set
+            {
+                checkBoxElementEnableEvent = value;
+                if (checkBoxElementEnableEvent)
+                {
+                    EnableCheckBox.Click += EnableChange;
+                }
+                else
+                {
+                    EnableCheckBox.Click -= EnableChange;
+                }
+            }
+        }
         public CheckBoxDoubleRadioButton()
         {
             InitializeComponent();
+        }
+        private void EnableChange(object sender, RoutedEventArgs e)
+        {
+            RadioButtonOneEnable = (bool)EnableCheckBox.IsChecked;
+            RadioButtonTwoEnable = (bool)EnableCheckBox.IsChecked;
+            RadioButtonOne.IsChecked = false;
+            RadioButtonTwo.IsChecked = false;
         }
     }
 }
