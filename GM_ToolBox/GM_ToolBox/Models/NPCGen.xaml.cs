@@ -30,12 +30,31 @@ namespace GM_Toolbox.Models
         private void SetUp()
         {
             //RaceSelection.ListDropDown.ItemsSource = races;
+            SkillSelection.Click += SkillEnableEvent;
+            EnableSpecialRacialBonus.Click += SpecialEnalbleEvent;
             ReturnHomeButton.Click += HomeButtonClickEvent;
         }
         private void HomeButtonClickEvent(object sender, RoutedEventArgs e)
         {
             location.CloseChildWindows(this);
         }
+        private void SpecialEnalbleEvent(object sender, RoutedEventArgs e)
+        {
+            foreach (CheckBox trait in SpecialBonusPanel.Children)
+            {
+                trait.IsEnabled = (bool)EnableSpecialRacialBonus.IsChecked;
+                trait.IsChecked = false;
+            }
+        }
+        private void SkillEnableEvent(object sender, RoutedEventArgs e)
+        {
+            foreach (CheckBox skill in SkillPanel.Children)
+            {
+                skill.IsEnabled = (bool)SkillSelection.IsChecked;
+                skill.IsChecked = false;
+            }
+        }
+
     }
 }
 

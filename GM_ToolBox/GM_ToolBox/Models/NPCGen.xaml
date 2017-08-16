@@ -55,6 +55,37 @@
                                                CheckBoxElementEnableEvent="True"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
+                <StackPanel.Resources>
+                    <Style TargetType="CheckBox">
+                        <Setter Property="Margin" Value="5"/>
+                        <Setter Property="FontSize" Value="10"/>
+                        <Setter Property="VerticalContentAlignment" Value="Center"/>
+                        <Setter Property="IsEnabled" Value="False"/>
+                    </Style>
+                </StackPanel.Resources>
+                <Viewbox Height="30"
+                         Margin="0 5">
+                    <CheckBox x:Name="EnableSpecialRacialBonus"
+                              Content="Use Special Racal Bonus"
+                              FontSize="8"/>
+                </Viewbox>
+                <StackPanel x:Name="SpecialBonusPanel"
+                            Orientation="Horizontal">
+                    <CheckBox x:Name="StrSpecialBonus"
+                              Content="Str"/>
+                    <CheckBox x:Name="DexSpecialBonus"
+                              Content="Dex"/>
+                    <CheckBox x:Name="ConSpecialBonus"
+                              Content="Con"/>
+                    <CheckBox x:Name="IntSpecialBonus"
+                              Content="Int"/>
+                    <CheckBox x:Name="WisSpecialBonus"
+                              Content="Wis"/>
+                    <CheckBox x:Name="ChaSpecialBonus"
+                              Content="Cha"/>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
                 <uce:CheckBoxOneLabeledTextField x:Name="StrStat"
                                                  LabelColor="Black"
                                                  LabelContent="Str:"
@@ -106,7 +137,65 @@
                                                  TextBoxWidth="25"
                                                  TextBoxEnable="False"/>
             </StackPanel>
-            <uce:ButtonLabel x:Name="ReturnHomeButton"
+            <StackPanel Orientation="Horizontal">
+                <Viewbox Height="20"
+                         Margin="0 5"
+                         VerticalAlignment="Top">
+                    <CheckBox x:Name="SkillSelection"
+                              Content="Use Skills"
+                              FontSize="8"
+                              VerticalContentAlignment="Center"/>
+                </Viewbox>
+                <WrapPanel x:Name="SkillPanel"
+                           Orientation="Vertical"
+                           Height="175">
+                    <WrapPanel.Resources>
+                        <Style TargetType="CheckBox">
+                            <Setter Property="Margin" Value="5 2"/>
+                            <Setter Property="FontSize" Value="10"/>
+                            <Setter Property="VerticalContentAlignment" Value="Center"/>
+                            <Setter Property="IsEnabled" Value="False"/>
+                        </Style>
+                    </WrapPanel.Resources>
+                    <CheckBox x:Name="AcrobaticsSkill"
+                              Content="Acrobatics"/>
+                    <CheckBox x:Name="AnimalHandelingSkill"
+                              Content="Animal Handeling"/>
+                    <CheckBox x:Name="ArcanaSkill"
+                              Content="Arcana"/>
+                    <CheckBox x:Name="AthleticsSkill"
+                              Content="Athletics"/>
+                    <CheckBox x:Name="DeceptionSkill"
+                              Content="Deception"/>
+                    <CheckBox x:Name="HistorySkill"
+                              Content="History"/>
+                    <CheckBox x:Name="InsightSkill"
+                              Content="Insight"/>
+                    <CheckBox x:Name="IntimidationSkill"
+                              Content="Intimidation"/>
+                    <CheckBox x:Name="InvestigationSkill"
+                              Content="Investigation"/>
+                    <CheckBox x:Name="MedicineSkill"
+                              Content="Medicine"/>
+                    <CheckBox x:Name="NatureSkill"
+                              Content="Nature"/>
+                    <CheckBox x:Name="PerceptionSkill"
+                              Content="Perception"/>
+                    <CheckBox x:Name="PerformanceSkill"
+                              Content="Performance"/>
+                    <CheckBox x:Name="PersuasionSkill"
+                              Content="Persuasion"/>
+                    <CheckBox x:Name="ReligionSkill"
+                              Content="Religion"/>
+                    <CheckBox x:Name="SleightHandSkill"
+                              Content="Sleight of Hand"/>
+                    <CheckBox x:Name="StealthSkill"
+                              Content="Stealth"/>
+                    <CheckBox x:Name="SurvivalSkill"
+                              Content="Survival"/>
+                </WrapPanel>
+            </StackPanel>
+                <uce:ButtonLabel x:Name="ReturnHomeButton"
                              LabelContent="back to home"
                              LabelFontSize="18"
                              LabeledButtonHeight="20"
