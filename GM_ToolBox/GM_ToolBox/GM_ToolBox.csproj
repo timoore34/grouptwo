@@ -97,6 +97,10 @@
     <Compile Include="ExtraFiles\ControlElements\NameTextEntryCheckBox.xaml.cs">
       <DependentUpon>NameTextEntryCheckBox.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ExtraFiles\Enums\Races.cs" />
+    <Compile Include="ExtraFiles\Enums\Tools.cs" />
+    <Compile Include="ExtraFiles\Enums\Weapons.cs" />
+    <Compile Include="ExtraFiles\Parsing\RaceParsing.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
