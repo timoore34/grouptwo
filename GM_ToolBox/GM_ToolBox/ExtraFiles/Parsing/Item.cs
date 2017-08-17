@@ -17,7 +17,7 @@ namespace GM_ToolBox.ExtraFiles.Parsing
 
         private Rarity GetRarity(bool isMagical)
         {
-            Rarity result;
+            Rarity result = Rarity.Trash;
             Random rando = new Random();
             int x = rando.Next(1, 101);
             if(!isMagical)
@@ -26,10 +26,11 @@ namespace GM_ToolBox.ExtraFiles.Parsing
                 {
                     if(x/2 < 15)
                     {
-                        result = ;
+                       
                     }
                 }
             }
+            return result;
         }
     }
 }

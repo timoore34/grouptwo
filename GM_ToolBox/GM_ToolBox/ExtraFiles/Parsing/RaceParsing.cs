@@ -25,6 +25,14 @@ namespace GM_ToolBox.ExtraFiles.Parsing
         private int speed;
         private int darkvision;
         private List<Weapons> racialWeaponPro;
+        private List<Tools> racialToolPro;
+        private List<Languages> racialLanguagesPro;
+        private List<Armor> racialArmorPro;
+        private List<string> extraTraits;
+        private List<string> maleNames;
+        private List<string> femaleNames;
+        private List<string> familyNames;
+        private bool specialAbilities;
     }
     class RaceParsing
     {
