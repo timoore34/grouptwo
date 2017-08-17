@@ -122,7 +122,21 @@
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 />
-
+            <Label x:Name="DadvResultLabel" Foreground="WhiteSmoke" FontSize="24"
+                   Grid.Column="2" Grid.Row="5" HorizontalAlignment="Center"
+                   VerticalAlignment="Center"/>
+            <Viewbox Grid.Column="2" Grid.Row="1" MaxWidth="130">
+                <RadioButton x:Name="AdvantageBox" Content="Advantage" 
+                             Foreground="WhiteSmoke" GroupName="Advantages"/>
+            </Viewbox>
+            <Viewbox Grid.Column="2" Grid.Row="2" MaxWidth="150">
+                <RadioButton x:Name="DisadvBox" Content="Disadvantage" 
+                             Foreground="WhiteSmoke" GroupName="Advantages"/>
+            </Viewbox>
+            <Viewbox Grid.Column="2" Grid.Row="3" MaxWidth="80">
+                <RadioButton x:Name="NormalBox" Content="None" Foreground="WhiteSmoke"
+                             GroupName="Advantages" IsChecked="True"/>
+            </Viewbox>
         </Grid>
 
         <Button

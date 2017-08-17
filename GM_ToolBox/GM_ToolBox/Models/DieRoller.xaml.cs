@@ -59,14 +59,51 @@ namespace GM_Toolbox.Models
                 {
                     //SplashScreen splash = new SplashScreen(@"C:\Users\Bradly Holland-Hedge\Documents\GitHub\grouptwo\GM_ToolBox\GM_ToolBox\ExtraFiles\ElDierado.gif");
                     //splash.Show(true);
-                    ResultLabel.Content = RollDie(numOfDice, typeOfDice, mod);
+                    if ((bool)AdvantageBox.IsChecked)
+                    {
+                        int resultOne = RollDie(numOfDice, typeOfDice, mod), resultTwo = RollDie(numOfDice, typeOfDice, mod);
+                        ResultLabel.Content = resultOne;
+                        DadvResultLabel.Content = resultTwo;
+                        if (resultOne > resultTwo)
+                        {
+                            ResultLabel.Foreground = Brushes.Purple;
+                            DadvResultLabel.Foreground = Brushes.Brown;
+                        }
+                        else
+                        {
+                            ResultLabel.Foreground = Brushes.Brown;
+                            DadvResultLabel.Foreground = Brushes.Purple;
+                        }
+                    }
+                    else if ((bool)DisadvBox.IsChecked)
+                    {
+                        int resultOne = RollDie(numOfDice, typeOfDice, mod), resultTwo = RollDie(numOfDice, typeOfDice, mod);
+                        ResultLabel.Content = resultOne;
+                        DadvResultLabel.Content = resultTwo;
+                        if (resultOne < resultTwo)
+                        {
+                            ResultLabel.Foreground = Brushes.Purple;
+                            DadvResultLabel.Foreground = Brushes.Brown;
+                        }
+                        else
+                        {
+                            ResultLabel.Foreground = Brushes.Brown;
+                            DadvResultLabel.Foreground = Brushes.Purple;
+                        }
+                    }
+                    else
+                    {
+                        ResultLabel.Content = RollDie(numOfDice, typeOfDice, mod);
+                        ResultLabel.Foreground = Brushes.Purple;
+                        DadvResultLabel.Content = "";
+                    }
                 }
             }
         }
-
+        Random rando = new Random();
         private int RollDie(int numOfDice, int numOfSides, int mod)
         {
-            Random rando = new Random();
+            
             int sum = 0;
 
 
