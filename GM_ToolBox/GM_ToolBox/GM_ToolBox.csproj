@@ -82,6 +82,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ExtraFiles\CharacterSheet.cs" />
     <Compile Include="ExtraFiles\ControlElements\ButtonLabel.xaml.cs">
       <DependentUpon>ButtonLabel.xaml</DependentUpon>
     </Compile>
@@ -98,8 +99,10 @@
       <DependentUpon>NameTextEntryCheckBox.xaml</DependentUpon>
     </Compile>
     <Compile Include="ExtraFiles\Enums\Races.cs" />
+    <Compile Include="ExtraFiles\Enums\Rarity.cs" />
     <Compile Include="ExtraFiles\Enums\Tools.cs" />
     <Compile Include="ExtraFiles\Enums\Weapons.cs" />
+    <Compile Include="ExtraFiles\Parsing\Item.cs" />
     <Compile Include="ExtraFiles\Parsing\RaceParsing.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -183,6 +186,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="ExtraFiles\ElDierado.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ExtraFiles\WhiteLightning.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
