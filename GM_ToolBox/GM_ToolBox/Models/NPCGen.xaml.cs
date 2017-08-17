@@ -30,9 +30,10 @@ namespace GM_Toolbox.Models
         private void SetUp()
         {
             //RaceSelection.ListDropDown.ItemsSource = races;
+            ReturnHomeButton.Click += HomeButtonClickEvent;
             SkillSelection.Click += SkillEnableEvent;
             EnableSpecialRacialBonus.Click += SpecialEnalbleEvent;
-            ReturnHomeButton.Click += HomeButtonClickEvent;
+            SavingSelection.Click += SavingThrowEnableEvent;
         }
         private void HomeButtonClickEvent(object sender, RoutedEventArgs e)
         {
@@ -54,7 +55,14 @@ namespace GM_Toolbox.Models
                 skill.IsChecked = false;
             }
         }
-
+        private void SavingThrowEnableEvent(object sender, RoutedEventArgs e)
+        {
+            foreach (CheckBox save in SavingThrowPanel.Children)
+            {
+                save.IsEnabled = (bool)SavingSelection.IsChecked;
+                save.IsChecked = false;
+            }
+        }
     }
 }
 

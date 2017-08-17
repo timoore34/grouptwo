@@ -36,13 +36,13 @@
                                                CheckBoxElementEnableEvent="True"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <uce:CheckBoxDropdownBox x:Name="RaceSelection"
-                                         CheckBoxSize="20"
-                                         CheckBoxTextFontSize="10"
-                                         CheckBoxContent="Use Race"
-                                         DropDownListWidth="75"
-                                         ComboBoxEnableState="False"
-                                         CheckBoxElementEnableEvent="True"/>
+                <uce:CheckBoxOneLabeledTextField x:Name="LevelSelection"
+                                                 CheckBoxContent="Use Level"
+                                                 LabelContent="Level:"
+                                                 TextBoxWidth="25"
+                                                 TextBoxEnable="False"
+                                                 CheckBoxElementEnableEvent="True"
+                                                 LabelFontSize="10"/>
                 <uce:CheckBoxDoubleRadioButton x:Name="ClassStateSelection"
                                                CheckBoxSize="20"
                                                TextColor="Black"
@@ -53,6 +53,13 @@
                                                RadioButtonOneEnable="False"
                                                RadioButtonTwoEnable="False"
                                                CheckBoxElementEnableEvent="True"/>
+                <uce:CheckBoxDropdownBox x:Name="RaceSelection"
+                                         CheckBoxSize="20"
+                                         CheckBoxTextFontSize="10"
+                                         CheckBoxContent="Use Race"
+                                         DropDownListWidth="75"
+                                         ComboBoxEnableState="False"
+                                         CheckBoxElementEnableEvent="True"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <StackPanel.Resources>
@@ -139,7 +146,7 @@
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Viewbox Height="20"
-                         Margin="0 5"
+                         Margin="5 5 0 5"
                          VerticalAlignment="Top">
                     <CheckBox x:Name="SkillSelection"
                               Content="Use Skills"
@@ -194,14 +201,45 @@
                     <CheckBox x:Name="SurvivalSkill"
                               Content="Survival"/>
                 </WrapPanel>
+                <Viewbox Height="20"
+                         Margin="0 5"
+                         VerticalAlignment="Top">
+                    <CheckBox x:Name="SavingSelection"
+                              Content="Use Saving Throws"
+                              FontSize="8"
+                              VerticalContentAlignment="Center"/>
+                </Viewbox>
+                <StackPanel x:Name="SavingThrowPanel">
+                    <StackPanel.Resources>
+                        <Style TargetType="CheckBox">
+                            <Setter Property="Margin" Value="5 2"/>
+                            <Setter Property="FontSize" Value="10"/>
+                            <Setter Property="VerticalContentAlignment" Value="Center"/>
+                            <Setter Property="IsEnabled" Value="False"/>
+                        </Style>
+                    </StackPanel.Resources>
+                    <CheckBox x:Name="StrSave"
+                              Content="Strength"/>
+                    <CheckBox x:Name="DexSave"
+                              Content="Dexterity"/>
+                    <CheckBox x:Name="ConSave"
+                              Content="Constitution"/>
+                    <CheckBox x:Name="IntSave"
+                              Content="Intelligence"/>
+                    <CheckBox x:Name="WisSave"
+                              Content="Wisdom"/>
+                    <CheckBox x:Name="ChaSave"
+                              Content="Charisma"/>
+                </StackPanel>
             </StackPanel>
-                <uce:ButtonLabel x:Name="ReturnHomeButton"
-                             LabelContent="back to home"
-                             LabelFontSize="18"
-                             LabeledButtonHeight="20"
-                             LabeledButtonWidth="20"
-                             ButtonColor="black"
-                             HorizontalAlignment="right"/>
         </StackPanel>
+        <uce:ButtonLabel x:Name="ReturnHomeButton"
+                        LabelContent="back to home"
+                        LabelFontSize="18"
+                        LabeledButtonHeight="20"
+                        LabeledButtonWidth="20"
+                        ButtonColor="black"
+                        HorizontalAlignment="right"
+                        VerticalAlignment="Bottom"/>
     </Grid>
 </Window>
