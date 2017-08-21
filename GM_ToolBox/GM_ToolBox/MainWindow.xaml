@@ -35,7 +35,7 @@
             Background="#191919">
             <MediaElement
                 x:Name="LeftGif"
-                Source="C:\Users\Bradly Holland-Hedge\Documents\Projects\GM_Toolbox\GM_Toolbox\ExtraFiles\WhiteLightning.gif"
+                Source="ExtraFiles\WhiteLightning.gif"
                 />
         </Grid>
         <Grid
@@ -46,7 +46,7 @@
             Background="#191919">
             <MediaElement
                 x:Name="RightGif"
-                Source="C:\Users\Bradly Holland-Hedge\Documents\Projects\GM_Toolbox\GM_Toolbox\ExtraFiles\WhiteLightning.gif"                
+                Source="ExtraFiles\WhiteLightning.gif"                
                 />
         </Grid>
         <Label
