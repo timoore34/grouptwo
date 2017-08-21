@@ -35,7 +35,12 @@
             Background="#191919">
             <MediaElement
                 x:Name="LeftGif"
+<<<<<<< HEAD
+                Source="ExtraFiles\WhiteLightning.gif"
+                />
+=======
                 Source="ExtraFiles\WhiteLightning.gif"/>
+>>>>>>> origin/master
         </Grid>
         <Grid
             x:Name="RightGifGrid"
@@ -45,7 +50,12 @@
             Background="#191919">
             <MediaElement
                 x:Name="RightGif"
+<<<<<<< HEAD
+                Source="ExtraFiles\WhiteLightning.gif"                
+                />
+=======
                 Source="ExtraFiles\WhiteLightning.gif"/>
+>>>>>>> origin/master
         </Grid>
         <Label
             x:Name="MMNameLabel"
