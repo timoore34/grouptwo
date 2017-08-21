@@ -23,7 +23,13 @@ namespace GM_Toolbox.Models
         {
             InitializeComponent();
         }
-
+        /*
+         * 2 text boxes - 1 dmg done, 1 how to beat
+         *  drop down for reasons
+         *  3 buttons - save load generate
+         *  2 check boxes for reasons
+         *  
+         */ 
         private void HomeMenuButton_Click(object sender, RoutedEventArgs e)
         {
             MainWindow mw = new MainWindow();

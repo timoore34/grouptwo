@@ -98,6 +98,8 @@
     <Compile Include="ExtraFiles\ControlElements\NameTextEntryCheckBox.xaml.cs">
       <DependentUpon>NameTextEntryCheckBox.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ExtraFiles\Enums\Armor.cs" />
+    <Compile Include="ExtraFiles\Enums\Languages.cs" />
     <Compile Include="ExtraFiles\Enums\Races.cs" />
     <Compile Include="ExtraFiles\Enums\Rarity.cs" />
     <Compile Include="ExtraFiles\Enums\Tools.cs" />

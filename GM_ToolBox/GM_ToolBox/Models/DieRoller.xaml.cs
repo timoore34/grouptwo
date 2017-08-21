@@ -115,6 +115,51 @@ namespace GM_Toolbox.Models
 
             return sum;
         }
+
+        private void PercentageRollButton_Click(object sender, RoutedEventArgs e)
+        {
+            int diceOne = RollDie(1, 10, 0) - 1, diceTwo = RollDie(1, 10, 0) - 1;
+            int resultOne = (diceOne * 10) + diceTwo;
+            if ((bool)AdvantageBox.IsChecked)
+            {
+                int resultTwo = ((RollDie(1, 10, 0) - 1) * 10) + (RollDie(1, 10, 0) - 1);
+                DadvResultLabel.Content = resultTwo;
+                ResultLabel.Content = resultOne;
+                if (resultOne > resultTwo)
+                {
+                    ResultLabel.Foreground = Brushes.Purple;
+                    DadvResultLabel.Foreground = Brushes.Brown;
+                }
+                else
+                {
+                    ResultLabel.Foreground = Brushes.Brown;
+                    DadvResultLabel.Foreground = Brushes.Purple;
+                }
+            }
+            else if ((bool)DisadvBox.IsChecked)
+            {
+                int resultTwo = ((RollDie(1, 10, 0) - 1) * 10) + (RollDie(1, 10, 0) - 1);
+                ResultLabel.Content = resultOne;
+                DadvResultLabel.Content = resultTwo;
+                if (resultOne < resultTwo)
+                {
+
+                    ResultLabel.Foreground = Brushes.Purple;
+                    DadvResultLabel.Foreground = Brushes.Brown;
+                }
+                else
+                {
+                    ResultLabel.Foreground = Brushes.Brown;
+                    DadvResultLabel.Foreground = Brushes.Purple;
+                }
+            }
+            else
+            {
+                ResultLabel.Content = resultOne;
+                ResultLabel.Foreground = Brushes.Purple;
+                DadvResultLabel.Content = "";
+            }
+        }
     }
 }
 
