@@ -28,8 +28,8 @@
         <Button
             x:Name="HomeMenuButton"
             Background="Black"
-            Grid.Column="2"
-            Grid.Row="1"
+            Grid.Column="4"
+            Grid.Row="7"
             Height="20"
             Width="20"
             Margin="10"
@@ -40,8 +40,8 @@
         <Label
             Content="Back to Home"
             Foreground="Black"
-            Grid.Column="3"
-            Grid.Row="1"
+            Grid.Column="5"
+            Grid.Row="7"
             VerticalAlignment="Center"
             HorizontalAlignment="Center"
             FontSize="18"
