@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace GM_ToolBox.ExtraFiles.Enums
 {
+    [Serializable]
     public enum Races
     {
         Hill_Dwarf,
@@ -22,5 +23,12 @@ namespace GM_ToolBox.ExtraFiles.Enums
         Half_Elf,
         Half_Orc,
         Tiefling
-    };
+    }
+    public static class RaceExtention
+    {
+        public static string RaceToString(this Races race)
+        {
+            return race.ToString().Replace("_", " ");
+        }
+    }
 }

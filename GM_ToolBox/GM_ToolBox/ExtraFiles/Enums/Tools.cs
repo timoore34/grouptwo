@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace GM_ToolBox.ExtraFiles.Enums
 {
+    [Serializable]
     public enum Tools
     {
         Alchemist_aps_s_supplies_AT,
@@ -45,6 +47,17 @@ namespace GM_ToolBox.ExtraFiles.Enums
         Navigator_aps_s_tools_UT,
         Poisoner_aps_s_kit_UT,
         Thieves_aps__tools_UT,
-        Vehicles_UT
+        Vehicles_UT,
+    }
+    public static class ToolsExtention
+    {
+        public static string ToolToString(this Tools tool)
+        {
+            return tool.ToString().Remove(tool.ToString().Length - 3, 3).Replace("_aps_", "'").Replace("_hyp_", "-").Replace("_", " ");
+        }
+        public static string ToolToType(this Tools tool)
+        {
+            return tool.ToString().Remove(0, tool.ToString().Length - 2);
+        }
     }
 }

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace GM_ToolBox.ExtraFiles.Enums
 {
+    [Serializable]
     public enum Weapons
     {
         Club_SMW,
@@ -46,5 +47,16 @@ namespace GM_ToolBox.ExtraFiles.Enums
         Heavy_Crossbow_MRW,
         Longbow_MRW,
         Net_MRW
-    };
+    }
+    public static class WeaponExtention
+    {
+        public static string WeaponToString(this Weapons weapon)
+        {
+            return weapon.ToString().Remove(weapon.ToString().Length - 4, 4).Replace("_", " ");
+        }
+        public static string WeaponToType(this Weapons weapon)
+        {
+            return weapon.ToString().Remove(0, weapon.ToString().Length - 3);
+        }
+    }
 }

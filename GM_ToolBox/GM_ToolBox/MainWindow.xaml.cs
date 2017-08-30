@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using GM_Toolbox.Models;
+using GM_ToolBox.ExtraFiles.Enums;
+using GM_ToolBox.ExtraFiles.Parsing;
 
 namespace GM_Toolbox
 {
@@ -25,7 +27,6 @@ namespace GM_Toolbox
         {
             InitializeComponent();
         }
-
         private void RandomBattleMenuButton_Click(object sender, RoutedEventArgs e)
         {
             BattleRandomizer br = new BattleRandomizer();

@@ -102,6 +102,7 @@
     <Compile Include="ExtraFiles\Enums\Languages.cs" />
     <Compile Include="ExtraFiles\Enums\Races.cs" />
     <Compile Include="ExtraFiles\Enums\Rarity.cs" />
+    <Compile Include="ExtraFiles\Enums\Skills.cs" />
     <Compile Include="ExtraFiles\Enums\Tools.cs" />
     <Compile Include="ExtraFiles\Enums\Weapons.cs" />
     <Compile Include="ExtraFiles\Parsing\Item.cs" />
@@ -188,8 +189,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="ExtraFiles\ElDierado.gif" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="ExtraFiles\WhiteLightning.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
