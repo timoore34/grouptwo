@@ -27,22 +27,26 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Grid x:Name="LeftGifGrid"
-              Grid.Column="0"
-              Grid.Row="1"
-              Grid.RowSpan="5"
-              Background="#191919">
-            <MediaElement x:Name="LeftGif"
-                          Source="ExtraFiles\WhiteLightning.gif"/>
-        </Grid>
-        <Grid x:Name="RightGifGrid"
-              Grid.Column="5"
-              Grid.Row="1"
-              Grid.RowSpan="5"
-              Background="#191919">
-            <MediaElement x:Name="RightGif"
-                          Source="ExtraFiles\WhiteLightning.gif"/>
-        </Grid>
+        <Grid
+            x:Name="LeftGifGrid"
+            Grid.Column="0"
+            Grid.Row="1"
+            Grid.RowSpan="5"
+            Background="#191919">
+            <MediaElement
+                x:Name="LeftGif"
+                Source="ExtraFiles\WhiteLightning.gif"
+                />        </Grid>
+        <Grid
+            x:Name="RightGifGrid"
+            Grid.Column="5"
+            Grid.Row="1"
+            Grid.RowSpan="5"
+            Background="#191919">
+            <MediaElement
+                x:Name="RightGif"
+                Source="ExtraFiles\WhiteLightning.gif"                
+                />        </Grid>
         <Label x:Name="MMNameLabel"
                Background="#191919"
                Foreground="White"

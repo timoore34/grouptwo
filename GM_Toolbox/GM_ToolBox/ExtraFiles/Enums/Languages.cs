@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace GM_ToolBox.ExtraFiles.Enums
 {
+    [Serializable]
     public enum Languages
     {
         Common,

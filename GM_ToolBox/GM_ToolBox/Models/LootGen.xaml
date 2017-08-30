@@ -6,14 +6,7 @@
         xmlns:local="clr-namespace:GM_Toolbox.Models"
         mc:Ignorable="d"
         Title="Loot Generator" Height="500" Width="750">
-    <Grid Background="LightBlue">
-
-        <Grid.ColumnDefinitions>
-
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-
-        </Grid.RowDefinitions>
+    <Grid Background="LightSlateGray">
         <Button x:Name="Home"
                 Content="Back to Home"
                 Click="HomeMenuButton_Click" Margin="0,0,10,10.5" Height="34" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="157"
@@ -22,14 +15,17 @@
             Content="Generate"
             Margin="0,0,172,10.5"
             FontSize="17"
-            Click="GenerateButton_Click" HorizontalAlignment="Right" Width="225" Height="34" VerticalAlignment="Bottom" 
+            Click="GenerateButton_Click" 
+            HorizontalAlignment="Right" 
+            Width="225" Height="34" 
+            VerticalAlignment="Bottom" 
                 />
         <TextBlock x:Name="ResultTextBlock" 
                    TextWrapping="Wrap" 
                    Text="Text Goes Here..."
                    FontSize="16" 
                    Margin="348,10,10,49.5"
-                   Background="beige"
+                   Background="Olive"
                    FontStyle="italic"
                    />
         <Label x:Name="label"
@@ -68,7 +64,7 @@
                    Content="Rarity Selection" 
                    Grid.ColumnSpan="3"
                    FontSize="17"
-                   Background="gray" Margin="0,0,0,3"/>
+                   Background="DarkGray" Margin="0,0,0,3"/>
             <CheckBox x:Name="Rarity1" Content="Garbage Loot" Margin="0,10" Grid.Row="1" FontSize="14"
                       />
             <CheckBox x:Name="Rarity2" Content="Table Scraps" Margin="0,10" Grid.Row="1" Grid.Column="1" FontSize="14"

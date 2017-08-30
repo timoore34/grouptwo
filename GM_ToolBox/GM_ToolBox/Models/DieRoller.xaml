@@ -6,178 +6,164 @@
         xmlns:local="clr-namespace:GM_Toolbox.Models"
         mc:Ignorable="d"
         Title="Die Roller" Height="500" Width="750">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="3*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
+    <Grid Background="Green">
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
-        <Grid
-            x:Name="RollArea"
-            Grid.Column="0"
-            Grid.Row="1"
-            Grid.RowSpan="5"
-            Background="Green">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <Label
-                Content="Number of Dice:"
-                Foreground="WhiteSmoke"
-                Grid.Row="1"
-                Grid.Column="0"
-                FontSize="18"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center"
-                />
-            <Label
-                Content="Type of Dice:"
-                Foreground="WhiteSmoke"
-                Grid.Row="2"
-                Grid.Column="0"
-                FontSize="18"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center"
-                />
-            <Label
-                Content="Modifier:"
-                Foreground="WhiteSmoke"
-                Grid.Row="3"
-                Grid.Column="0"
-                FontSize="18"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center"
-                />
-            <Label
-                Content="Result:"
-                Foreground="WhiteSmoke"
-                Grid.Row="5"
-                Grid.Column="0"
-                FontSize="18"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center"
-                />
-            <TextBox
-                x:Name="NumOfDiceBox"
-                Grid.Column="1"
-                Grid.Row="1"
-                Height="40"
-                Width="100"
-                FontSize="18"
-                Background="WhiteSmoke"
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="label" 
+               Content="Multiple Rolls" 
+               Grid.Column="0"
+               HorizontalAlignment="Left"
+               Background="darkgray"
+               FontSize="26"
+               Margin="10,35,0,0" 
+               VerticalAlignment="Top" 
+               Height="51" Width="352"/>
+        <Label
+                Content="Results"
                 Foreground="Black"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center"
+                Grid.Column="0"
+                FontSize="28"
+            Background="DarkGray"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Bottom"
+            Height="54" Width="352"
+                Margin="10,0,0,10.5" Grid.Row="2"
                 />
-            <TextBox
-                x:Name="TypeOfDiceBox"
-                Grid.Column="1"
-                Grid.Row="2"
-                Height="40"
-                Width="100"
-                FontSize="18"
-                Background="WhiteSmoke"
-                Foreground="Black"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center"
-                />
-            <TextBox
-                x:Name="ModBox"
-                Grid.Column="1"
-                Grid.Row="3"
-                Height="40"
-                Width="100"
-                FontSize="18"
-                Background="WhiteSmoke"
-                Foreground="Black"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center"
-                />
-            <Label
-                x:Name="ResultLabel"
-                Foreground="WhiteSmoke"
-                FontSize="24"
-                Grid.Column="1"
-                Grid.Row="5"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center"
-                />
-            <Label x:Name="DadvResultLabel" Foreground="WhiteSmoke" FontSize="24"
-                   Grid.Column="2" Grid.Row="5" HorizontalAlignment="Center"
-                   VerticalAlignment="Center"/>
-            <Viewbox Grid.Column="2" Grid.Row="1" MaxWidth="130">
-                <RadioButton x:Name="AdvantageBox" Content="Advantage" 
-                             Foreground="WhiteSmoke" GroupName="Advantages"/>
-            </Viewbox>
-            <Viewbox Grid.Column="2" Grid.Row="2" MaxWidth="150">
-                <RadioButton x:Name="DisadvBox" Content="Disadvantage" 
-                             Foreground="WhiteSmoke" GroupName="Advantages"/>
-            </Viewbox>
-            <Viewbox Grid.Column="2" Grid.Row="3" MaxWidth="80">
-                <RadioButton x:Name="NormalBox" Content="None" Foreground="WhiteSmoke"
-                             GroupName="Advantages" IsChecked="True"/>
-            </Viewbox>
-        </Grid>
 
+        <RadioButton x:Name="DisadvBox" 
+                     Content="Disadvantage" 
+                     FontSize="22"
+                     Foreground="WhiteSmoke"
+                     GroupName="Advantages"
+                     Margin="224,18.5,0,0" 
+                     Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Width="138" Height="34" VerticalAlignment="Top"
+                     />
+        <RadioButton x:Name="AdvantageBox"
+                     Content="Advantage" 
+                     Foreground="WhiteSmoke" 
+                     FontSize="22"
+                     GroupName="Advantages"
+                     Margin="4,18.5,0,0" Grid.Column="0" Grid.Row="1" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" Width="124"
+                     />
+        <RadioButton x:Name="NormalBox"
+                     Content="None"
+                     Foreground="WhiteSmoke"
+                     FontSize="22"
+                     GroupName="Advantages" 
+                     IsChecked="True" Margin="138,18.5,0,0" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Width="80" Height="29" VerticalAlignment="Top" 
+                     />
+        <Label
+                x:Name="ResultLabel"
+                FontSize="55"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center" 
+            Foreground="White"
+            Margin="10,10.5,262.5,78.5"
+            Height="100" Width="100"
+            Grid.Row="3" Grid.Column="0"
+                />
+        <Label x:Name="DadvResultLabel"
+               Foreground="WhiteSmoke"
+               FontSize="60"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center" 
+               Margin="224,78.5,48.5,10.5"
+               Height="100" Width="100" Grid.Column="0" Grid.Row="3"
+               
+               
+               />
         <Button
             x:Name="RollButton"
             Content="Roll"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            Height="40"
-            Width="100"
+            VerticalAlignment="Bottom"
+            Height="70"
             Background="White"
             Foreground="Red"
             FontSize="24"
             Grid.Column="1"
-            Grid.ColumnSpan="2"
-            Grid.Row="1"
-            Click="RollButton_Click"
+            Click="RollButton_Click" Grid.Row="3" Margin="0,0,1,109.5" HorizontalAlignment="Right" Width="174"
             />
-        <Button x:Name="PercentageRollButton" Content="Percentage" HorizontalAlignment="Center"
-                VerticalAlignment="Center" Height="40" Width="100" Background="White"
-                Foreground="Red" FontSize="19" Grid.Column="1" Grid.ColumnSpan="2"
-                Grid.Row="2" Click="PercentageRollButton_Click"/>
-        <Button
-            x:Name="HomeMenuButton"
-            Background="Black"
-            Grid.Column="1"
-            Grid.Row="5"
-            Height="20"
-            Width="20"
-            Margin="10"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center" 
-            Click="HomeMenuButton_Click"
-            />
+        <Button x:Name="PercentageRollButton" 
+                Content="Percentage"
+                VerticalAlignment="Bottom" 
+                Height="70" 
+                Background="White"
+                Foreground="Red" 
+                FontSize="26" 
+                Click="PercentageRollButton_Click" 
+                Grid.Row="3"
+                Grid.Column="1"
+                Margin="0,0,187,110.5" HorizontalAlignment="Right" Width="176"/>
+
+        <Button x:Name="Home"
+                Content="Back to Home" 
+                FontSize="26"
+                Margin="0,0,1,7.5"
+                Grid.Column="1"
+                Click="HomeMenuButton_Click" Grid.Row="3" HorizontalAlignment="Right" Width="362" Height="94" VerticalAlignment="Bottom"
+                />
+
+
+
+        <TextBox
+                x:Name="NumOfDiceBox"
+                Height="54"
+                FontSize="18"
+                Background="WhiteSmoke"
+                Foreground="Black"
+                Grid.Column="1"
+                VerticalAlignment="Bottom" Margin="0,0,1,8.5" HorizontalAlignment="Right" Width="138"
+                />
+        <TextBox
+                x:Name="ModBox"
+                Height="54"
+                Width="138"
+                FontSize="18"
+                Background="WhiteSmoke"
+                Foreground="Black"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"
+                Margin="0,0,1,8.5" Grid.Row="2" Grid.Column="1"
+                />
         <Label
-            Content="Back to Home"
-            Foreground="Black"
-            Grid.Column="2"
-            Grid.Row="5"
-            VerticalAlignment="Center"
-            HorizontalAlignment="Center"
-            FontSize="18"
-            />
+                Content="Modifier:"
+                Foreground="WhiteSmoke"
+                FontSize="26"
+                Grid.Row="2" Grid.Column="1" Margin="0,0,148,11.5" Height="44" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="113"
+                />
+        <Label
+                Content="Number of Dice:"
+                Foreground="WhiteSmoke"
+                FontSize="26"
+                HorizontalAlignment="Right"
+            Grid.Column="1"
+                VerticalAlignment="Top" Margin="0,39,149,0"
+                />
+        <Label
+                Content="Type of Dice:"
+                Foreground="WhiteSmoke"
+                FontSize="26" Grid.Row="1"  Grid.Column="1" Margin="0,0,148,13" Height="44" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="157"
+                />
+        <TextBox
+                x:Name="TypeOfDiceBox"
+                Height="54"
+                Width="138"
+                FontSize="18"
+                Background="WhiteSmoke"
+                Foreground="Black"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom" 
+            Grid.Row="1" Grid.Column="1"
+            Margin="0,0,0,10"
+                />
+
     </Grid>
 </Window>
