@@ -35,8 +35,9 @@
             Background="#191919">
             <MediaElement
                 x:Name="LeftGif"
-                Source="ExtraFiles\WhiteLightning.gif"
-                />        </Grid>
+                Source="ImageAndGifData/WhiteLightning.gif"
+                />        
+        </Grid>
         <Grid
             x:Name="RightGifGrid"
             Grid.Column="5"
@@ -45,8 +46,9 @@
             Background="#191919">
             <MediaElement
                 x:Name="RightGif"
-                Source="ExtraFiles\WhiteLightning.gif"                
-                />        </Grid>
+                Source="ImageAndGifData/WhiteLightning.gif"
+                />        
+        </Grid>
         <Label x:Name="MMNameLabel"
                Background="#191919"
                Foreground="White"

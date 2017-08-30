@@ -91,6 +91,12 @@ namespace GM_ToolBox.ExtraFiles.Parsing
         public List<string> FamilyNames { get => familyNames; set => familyNames = value; }
         public bool SpecialAbilities { get => specialAbilities; set => specialAbilities = value; }
     }
+    public class RaceParsing
+    {
+        private const string location = "BackgroundData/RaceDataFile.rce";
+        public RaceParsing()
+        {
 
-} 
- 
+        }
+    }
+}
