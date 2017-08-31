@@ -24,7 +24,7 @@ namespace GM_Toolbox.Models
     public partial class NPCGen : Window
     {
         private MainWindow location;
-        private Races? race;
+        private Races race;
         private List<int> statList = new List<int>();
         private List<TextBox> statValues = new List<TextBox>();
         private Dictionary<Races, Race> raceData = new Dictionary<Races, Race>();
@@ -73,14 +73,7 @@ namespace GM_Toolbox.Models
         private void RaceChanged(object sender, SelectionChangedEventArgs e)
         {
             ComboBox tempBox = (ComboBox)sender;
-            if (tempBox.SelectedIndex == -1)
-            {
-                race = null;
-            }
-            else
-            {
-                race = (Races)Enum.Parse(typeof(Races), tempBox.SelectedValue.ToString().Replace(" ", "_"));
-            }
+            race = (Races)Enum.Parse(typeof(Races), tempBox.SelectedValue.ToString().Replace(" ", "_"));
         }
 
         private void StatRangeFocusCheck(object sender, RoutedEventArgs e)
@@ -109,63 +102,75 @@ namespace GM_Toolbox.Models
             }
             text.CaretIndex = text.Text.Length;
         }
+        private void RaceAbilityScore(int position, int raceEffect)
+        {
+            int value;
+            if (int.TryParse(statValues.ElementAt(position).Text, out value))
+            {
+                statList.Add(raceEffect + value);
+            }
+            else
+            {
+                if (raceEffect != 0)
+                {
+                    statList.Add(raceEffect * -1);
+                }
+                else
+                {
+                    statList.Add(-10);
+                }
+            }
+        }
         private void GenerateAbilityScore(Races? race = null)
         {
-            int value, defaultValue = -10;
             Race selectedRace;
             statList.Clear();
-            if (race != null)
-            {
-                if (raceData.TryGetValue((Races)race, out selectedRace))
-                {
-                    statList.Add(selectedRace.StrBonus);
-                    statList.Add(selectedRace.DexBonus);
-                    statList.Add(selectedRace.ConBonus);
-                    statList.Add(selectedRace.IntBonus);
-                    statList.Add(selectedRace.WisBonus);
-                    statList.Add(selectedRace.ChaBonus);
-                }
-                for (int stat = 0; stat < statValues.Count; stat++)
-                {
-                    if (int.TryParse(statValues.ElementAt(stat).Text, out value))
-                    {
-                        statList.Insert(stat, statList.ElementAt(stat) + value);
-                        statList.RemoveAt(stat);
-                    }
-                    else
-                    {
-                        if (statList.ElementAt(stat) == 0)
-                        {
-                            statList.Insert(stat, defaultValue);
-                            statList.RemoveAt(stat);
-                        }
-                        else
-                        {
-                            statList.Insert(stat, (statList.ElementAt(stat) * -1));
-                            statList.RemoveAt(stat);
-                        }
 
+            if (raceData.TryGetValue((Races)race, out selectedRace))
+            {
+                RaceAbilityScore(0, selectedRace.StrBonus);
+                RaceAbilityScore(1, selectedRace.DexBonus);
+                RaceAbilityScore(2, selectedRace.ConBonus);
+                RaceAbilityScore(3, selectedRace.IntBonus);
+                RaceAbilityScore(4, selectedRace.WisBonus);
+                RaceAbilityScore(5, selectedRace.ChaBonus);
+            }
+            MessageBox.Show($"{statList.ElementAt(0)} {statList.ElementAt(1)} {statList.ElementAt(2)} {statList.ElementAt(3)} {statList.ElementAt(4)} {statList.ElementAt(5)}");
+
+        }
+        private void RandomRaceSelection()
+        {
+            Random rand = new Random();
+            bool valid = true;
+            if (RaceSelection.ListDropDown.SelectedIndex == -1)
+            {
+                foreach (TextBox text in statValues)
+                {
+                    if (valid)
+                    {
+                        if (string.IsNullOrEmpty(text.Text))
+                        {
+                            valid = false;
+                        }
                     }
+                }
+                if (!valid)
+                {
+                    race = (Races)Enum.GetValues(typeof(Races)).GetValue(rand.Next(0,14));
+                }
+                else
+                {
+                    //raceData.Values;
                 }
             }
             else
             {
-                foreach (TextBox text in statValues)
-                {
-                    if (int.TryParse(text.Text, out value))
-                    {
-                        statList.Add(value);
-                    }
-                    else
-                    {
-                        statList.Add(defaultValue);
-                    }
-                }
+
             }
-            MessageBox.Show($"{statList.ElementAt(0)} {statList.ElementAt(1)} {statList.ElementAt(2)} {statList.ElementAt(3)} {statList.ElementAt(4)} {statList.ElementAt(5)}");
         }
         private void GenerateCharacter(object sender, RoutedEventArgs e)
         {
+
             GenerateAbilityScore(race);
         }
         private void HomeButtonClickEvent(object sender, RoutedEventArgs e)

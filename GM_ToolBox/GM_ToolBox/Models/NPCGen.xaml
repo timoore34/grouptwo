@@ -57,7 +57,7 @@
                                          CheckBoxSize="20"
                                          CheckBoxTextFontSize="10"
                                          CheckBoxContent="Use Race"
-                                         DropDownListWidth="75"
+                                         DropDownListWidth="100"
                                          ComboBoxEnableState="False"
                                          CheckBoxElementEnableEvent="True"/>
             </StackPanel>
