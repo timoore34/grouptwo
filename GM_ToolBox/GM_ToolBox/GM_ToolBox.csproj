@@ -119,6 +119,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Models\CharacterSheetModel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Models\DieRoller.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -146,6 +150,9 @@
     </Compile>
     <Compile Include="Models\BattleRandomizer.xaml.cs">
       <DependentUpon>BattleRandomizer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CharacterSheetModel.xaml.cs">
+      <DependentUpon>CharacterSheetModel.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\DieRoller.xaml.cs">
       <DependentUpon>DieRoller.xaml</DependentUpon>

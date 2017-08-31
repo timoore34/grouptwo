@@ -30,5 +30,9 @@ namespace GM_ToolBox.ExtraFiles.Enums
         {
             return race.ToString().Replace("_", " ");
         }
+        public static Races StringToRace(this string race)
+        {
+            return (Races)Enum.Parse(typeof(Races), race.Replace(" ", "_"));
+        }
     }
 }

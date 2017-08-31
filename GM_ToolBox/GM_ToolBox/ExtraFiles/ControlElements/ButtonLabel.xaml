@@ -10,6 +10,8 @@
                 Height="30"
                 Width="30"/>
         <Label x:Name="LabeledButtonLabel"
-               Margin="10 5 5 5"/>
+               Margin="10 5 5 5"
+               HorizontalContentAlignment="Center"
+               VerticalContentAlignment="Center"/>
     </StackPanel>
 </UserControl>

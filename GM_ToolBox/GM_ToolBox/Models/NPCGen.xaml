@@ -61,37 +61,7 @@
                                          ComboBoxEnableState="False"
                                          CheckBoxElementEnableEvent="True"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <StackPanel.Resources>
-                    <Style TargetType="CheckBox">
-                        <Setter Property="Margin" Value="5"/>
-                        <Setter Property="FontSize" Value="10"/>
-                        <Setter Property="VerticalContentAlignment" Value="Center"/>
-                        <Setter Property="IsEnabled" Value="False"/>
-                    </Style>
-                </StackPanel.Resources>
-                <Viewbox Height="30"
-                         Margin="0 5">
-                    <CheckBox x:Name="EnableSpecialRacialBonus"
-                              Content="Use Special Racal Bonus"
-                              FontSize="8"/>
-                </Viewbox>
-                <StackPanel x:Name="SpecialBonusPanel"
-                            Orientation="Horizontal">
-                    <CheckBox x:Name="StrSpecialBonus"
-                              Content="Str"/>
-                    <CheckBox x:Name="DexSpecialBonus"
-                              Content="Dex"/>
-                    <CheckBox x:Name="ConSpecialBonus"
-                              Content="Con"/>
-                    <CheckBox x:Name="IntSpecialBonus"
-                              Content="Int"/>
-                    <CheckBox x:Name="WisSpecialBonus"
-                              Content="Wis"/>
-                    <CheckBox x:Name="ChaSpecialBonus"
-                              Content="Cha"/>
-                </StackPanel>
-            </StackPanel>
+            
             <StackPanel Orientation="Horizontal">
                 <uce:CheckBoxOneLabeledTextField x:Name="StrStat"
                                                  LabelColor="Black"
@@ -233,13 +203,20 @@
                 </StackPanel>
             </StackPanel>
         </StackPanel>
+        <Button x:Name="GenButton"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Bottom"
+                Content="Genrate Character"
+                Margin="20 12"
+                Padding="3"
+                Click="GenerateCharacter"/>
         <uce:ButtonLabel x:Name="ReturnHomeButton"
-                        LabelContent="back to home"
-                        LabelFontSize="18"
-                        LabeledButtonHeight="20"
-                        LabeledButtonWidth="20"
-                        ButtonColor="black"
-                        HorizontalAlignment="right"
-                        VerticalAlignment="Bottom"/>
+                         LabelContent="back to home"
+                         LabelFontSize="18"
+                         LabeledButtonHeight="20"
+                         LabeledButtonWidth="20"
+                         ButtonColor="black"
+                         HorizontalAlignment="Right"
+                         VerticalAlignment="Bottom"/>
     </Grid>
 </Window>
